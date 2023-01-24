@@ -1,0 +1,8 @@
+# Activation de la réécriture d'URL
+RewriteEngine On
+
+# Réécriture des URL des catégories
+RewriteRule ^categorie/([a-zA-Z-]*)/*$ categories.php?cat=$1 [L]
+
+# Réécriture des URL sans le ".php" à la fin (clean URL)
+RewriteRule ^([a-zA-Z_]+)/*$ $1.php [L]
